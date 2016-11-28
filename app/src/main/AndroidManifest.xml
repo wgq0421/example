@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.creatunion.example">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.creatunion.example.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="media"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.creatunion.example.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.creatunion.example.base.BaseActivity" />
+        <activity
+            android:name="com.creatunion.example.media.PictureActivity"
+            android:label="picture" />
+        <activity android:name="com.creatunion.example.media.SoundActivity" />
+        <activity android:name="com.creatunion.example.media.VideoActivity" />
+        <activity
+            android:name="com.creatunion.example.ok_http.OkActivity"
+            android:label="ok_http" />
+        <activity
+            android:name="com.creatunion.example.RefreshLoad.DownRefreshActivity"
+            android:label="refresh" />
+        <activity
+            android:name="com.creatunion.example.recyclerView.RecyclerActivity"
+            android:label="recycler" />
+        <activity android:name="com.creatunion.example.testtitle.TitleActivity" />
+        <activity
+            android:name="com.creatunion.example.side.SideActivity"
+            android:label="side" />
+    </application>
+
+</manifest>
